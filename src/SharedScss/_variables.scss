@@ -1,0 +1,44 @@
+$font-nunito-sans: 'Nunito Sans', sans-serif;
+
+$font-family: $font-nunito-sans;
+
+$max-width: 1440px;
+$web-side-space: 80px;
+
+$fontWeightThin: "thin";
+$fontWeightHairline: "hairline";
+$fontWeightExtraLight: "extraLight";
+$fontWeightUltraLight: "ultraLight";
+$fontWeightLight: "light";
+$fontWeightNormal: "normal";
+$fontWeightRegular: "regular";
+$fontWeightMedium: "medium";
+$fontWeightSemiBold: "semiBold";
+$fontWeightDemiBold: "demiBold";
+$fontWeightBold: "bold";
+$fontWeightExtraBold: "extraBold";
+$fontWeightUltraBold: "ultraBold";
+$fontWeightBlack: "black";
+$fontWeightHeavy: "heavy";
+$fontWeightExtraBlack: "extraBlack";
+$fontWeightUltraBlack: "ultraBlack";
+
+// $clr-primary: var(--primary-color);
+// $clr-primary-dark: var(--primary-dark-color);
+// $clr-primary-light: var(--primary-light-color);
+// $clr-secondary: var(--secondary-color);
+// $clr-secondary-dark: var(--secondary-dark-color);
+// $clr-secondary-light: var(--secondary-light-color);
+
+// $clr-white: white; //#FFFFFF
+// $clr-gray: gray; //#808080
+// $clr-black: black; //#000000
+
+// $clr-001: #ffffff;
+
+$clr-dark-blue: hsl(209, 23%, 22%);
+$clr-very-dark-blue: hsl(207, 26%, 17%);
+$clr-very-dark-blue: hsl(200, 15%, 8%);
+$clr-dark-gray: hsl(0, 0%, 52%);
+$clr-very-light-gray: hsl(0, 0%, 98%);
+$clr-white: hsl(0, 0%, 100%);
