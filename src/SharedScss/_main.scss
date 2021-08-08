@@ -1,0 +1,7 @@
+@import "./fonts";
+@import "./mixins";
+
+body {
+  @include theme-aware("background-color", "color-background");
+  @include theme-aware("color", "color-text");
+}
