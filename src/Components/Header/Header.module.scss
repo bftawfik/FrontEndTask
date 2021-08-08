@@ -1,23 +1,28 @@
+@import "../../SharedScss/variables";
 .Header {
-  // background-color: blue;
-  background-image: url("/design/desktop-design-home-light.jpg");
+  box-shadow: 0 0 10px -6px;
   .container {
     height: 80px;
+    padding: 0 $web-side-space;
     .row {
       display: flex;
+      justify-content: space-between;
       height: 100%;
       align-items: center;
-      // background-color: rgba(#ff0000, 0.3);
       .title {
-        color: red;
         font-size: 24px;
         margin: 0;
       }
+      .toggle {
+        font-size: 16px;
+        background-color: transparent;
+        border: 0;
+        padding: 0;
+        color: inherit;
+        svg {
+          margin-right: 10px;
+        }
+      }
     }
-  }
-  button {
-    // background-color: inherit;
-    // color: inherit;
-    font-size: 12px;
   }
 }

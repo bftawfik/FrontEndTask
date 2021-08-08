@@ -3,7 +3,12 @@
 @import "./mixins";
 
 body {
-  @include theme-aware("background-color", "color-background");
-  @include theme-aware("color", "color-text");
+  @include withTheme("background-color", "color-background");
+  @include withTheme("color", "color-text");
+  @include withTheme("box-shadow", "color-text", "0 0 0 0");
   font-family: $font-family;
+}
+
+* {
+  box-sizing: border-box;
 }

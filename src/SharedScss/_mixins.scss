@@ -1,9 +1,9 @@
 @import "./themes";
 
-@mixin theme-aware($key, $color) {
+@mixin withTheme($key, $color, $prefix: "", $suffix: "") {
   @each $theme-name, $theme-color in $themes {
     .theme-#{$theme-name} & {
-      #{$key}: map-get(map-get($themes, $theme-name), $color);
+      #{$key}: #{$prefix} map-get(map-get($themes, $theme-name), $color) #{$suffix};
     }
   }
 }

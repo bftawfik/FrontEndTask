@@ -28,6 +28,7 @@ const Header = () => {
             <button
               key={ndx}
               onClick={(e) => dispatch(changeThemeName(theme.value))}
+              className={classes.toggle}
             >
               <FontAwesomeIcon icon={icons[theme.value]} />
               {theme.label}
