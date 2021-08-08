@@ -1,4 +1,6 @@
+import { useEffect } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
 
 import Country from "./Pages/Country/Country";
 import Home from "./Pages/Home/Home";
@@ -9,6 +11,13 @@ import Header from "./Components/Header/Header";
 import "./App.scss";
 
 function App() {
+  const userTheme = useSelector((state) => state.user.theme);
+
+  useEffect(() => {
+    document.documentElement.className = "";
+    document.documentElement.classList.add(`theme-${userTheme}`);
+  }, [userTheme]);
+
   return (
     <div className="App">
       <Header />
