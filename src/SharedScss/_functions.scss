@@ -1,0 +1,27 @@
+@import "./variables";
+
+@function calcFontWeight($weightName) {
+  $result: map-get(
+    (
+      $fontWeightThin: 100,
+      $fontWeightHairline: 100,
+      $fontWeightExtraLight: 200,
+      $fontWeightUltraLight: 200,
+      $fontWeightLight: 300,
+      $fontWeightNormal: 400,
+      $fontWeightRegular: 400,
+      $fontWeightMedium: 500,
+      $fontWeightSemiBold: 600,
+      $fontWeightDemiBold: 600,
+      $fontWeightBold: 700,
+      $fontWeightExtraBold: 800,
+      $fontWeightUltraBold: 800,
+      $fontWeightBlack: 900,
+      $fontWeightHeavy: 900,
+      $fontWeightExtraBlack: 950,
+      $fontWeightUltraBlack: 950,
+    ),
+    $weightName
+  );
+  @return $result;
+}
