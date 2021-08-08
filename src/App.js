@@ -6,6 +6,8 @@ import NotFound from "./Pages/NotFound/NotFound";
 
 import Header from "./Components/Header/Header";
 
+import "./App.scss";
+
 function App() {
   return (
     <div className="App">
