@@ -4,9 +4,12 @@ import Country from "./Pages/Country/Country";
 import Home from "./Pages/Home/Home";
 import NotFound from "./Pages/NotFound/NotFound";
 
+import Header from "./Components/Header/Header";
+
 function App() {
   return (
     <div className="App">
+      <Header />
       <Router>
         <Switch>
           <Route path="/country/:id">
