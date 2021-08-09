@@ -9,8 +9,14 @@ body {
   font-family: $font-family;
 }
 
-.card {
+.element {
   @include withTheme("background-color", "color-elements");
+  @include withTheme("color", "color-text");
+}
+
+.input {
+  @include withTheme("background-color", "color-elements");
+  @include withTheme("color", "color-text");
 }
 
 * {
