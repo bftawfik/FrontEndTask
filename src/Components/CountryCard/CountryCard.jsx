@@ -9,7 +9,7 @@ const CountryCard = ({
 }) => {
   return (
     <Link
-      className={joinClassesWithSpace(classes.CountryCard, "card")}
+      className={joinClassesWithSpace(classes.CountryCard, "element")}
       to={`/country/${numericCode}`}
     >
       <div className={classes.imgContainer}>
