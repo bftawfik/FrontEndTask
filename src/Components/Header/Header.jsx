@@ -12,8 +12,8 @@ const icons = { light: faSun, dark: faMoon };
 
 const Header = () => {
   const dispatch = useDispatch();
-  const themesList = useSelector((state) => state.theme.list);
-  const userTheme = useSelector((state) => state.user.theme);
+  const stateThemesList = useSelector((state) => state.theme.list);
+  const stateUserTheme = useSelector((state) => state.user.theme);
 
   return (
     <FulscrnWrpr
@@ -22,8 +22,8 @@ const Header = () => {
     >
       <div className={classes.row}>
         <h1 className={classes.title}>Where in the world?</h1>
-        {themesList
-          .filter(({ value: themeValue }) => themeValue !== userTheme)
+        {stateThemesList
+          .filter(({ value: themeValue }) => themeValue !== stateUserTheme)
           .map((theme, ndx) => (
             <button
               key={ndx}
