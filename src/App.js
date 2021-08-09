@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 
 import Country from "./Pages/Country/Country";
 import Home from "./Pages/Home/Home";
+import Search from "./Pages/Search/Search";
 import NotFound from "./Pages/NotFound/NotFound";
 
 import Header from "./Components/Header/Header";
@@ -18,7 +19,7 @@ function App() {
   const stateUserTheme = useSelector((state) => state.user.theme);
   const stateAllCountries = useSelector((state) => state.countries.all);
   
-  const fetchUserLocation = async (dispatch, stateAllCountries) => {
+  const fetchAllCountries = async (dispatch, stateAllCountries) => {
     try {
       const response = await getAllCountries();
       const { data } = response;
@@ -40,7 +41,7 @@ function App() {
   }, [stateUserTheme]);
 
   useEffect(() => {
-    fetchUserLocation(dispatch, stateAllCountries);
+    fetchAllCountries(dispatch, stateAllCountries);
   }, [dispatch, stateAllCountries]);
 
   return (
@@ -48,6 +49,9 @@ function App() {
       <Header />
       <Router>
         <Switch>
+          <Route path="/search/:searchString">
+            <Search />
+          </Route>
           <Route path="/country/:id">
             <Country />
           </Route>
