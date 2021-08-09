@@ -1,0 +1,44 @@
+.CountryCard {
+  overflow: hidden;
+  // background-color: red;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  margin: 57px 0;
+  .imgContainer {
+    width: 100%;
+    height: 0;
+    padding-top: 60.4%;
+    position: relative;
+    img {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+      object-position: top center;
+    }
+  }
+  .dataContainer {
+    display: flex;
+    flex-direction: column;
+    margin: 0 22px;
+    h2 {
+      font-size: 18px;
+      margin: 25px 0 13px;
+    }
+    .dataRow {
+      display: flex;
+      margin: 3px 0;
+      h4 {
+        font-size: 14px;
+        margin: 0 5px 0 0;
+      }
+      p {
+        margin: 0;
+        font-size: 14px;
+      }
+    }
+  }
+}
