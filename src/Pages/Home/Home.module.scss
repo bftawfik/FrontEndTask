@@ -7,22 +7,27 @@ $columnWidth: calc(
 );
 
 .Home {
-  background-image: url("/design/desktop-design-home-light.jpg");
-  background-repeat: no-repeat;
-  background-position: center -80px;
-  height: 100vh;
+  // background-image: url("/design/desktop-design-home-light.jpg");
+  // background-repeat: no-repeat;
+  // background-position: center -80px;
+  padding: 48px 0;
+  // padding: 110px 0;
   .container {
     padding: 0 $web-side-space;
     .row {
       display: flex;
       justify-content: space-between;
+      .filterSelect {
+        width: 200px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px -6px;
+      }
     }
     .cardsContainer {
       display: grid;
       grid-template-columns: $columnWidth $columnWidth $columnWidth $columnWidth;
       column-gap: $columnGap;
       justify-content: space-evenly;
-      margin-top: 95px;
     }
   }
 }

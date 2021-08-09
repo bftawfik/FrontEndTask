@@ -11,11 +11,17 @@ $columnWidth: calc(
   // background-repeat: no-repeat;
   // background-position: center -80px;
   // height: 100vh;
+  padding: 48px 0;
   .container {
     padding: 0 $web-side-space;
     .row {
       display: flex;
       justify-content: space-between;
+      .filterSelect {
+        width: 200px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px -6px;
+      }
     }
     .cardsContainer {
       display: grid;

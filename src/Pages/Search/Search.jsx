@@ -14,9 +14,12 @@ import {
   getCustomStyles,
 } from "../../Components/StyledReactSelect/reactSelectConfig";
 
+import { joinClassesWithSpace } from "../../Helpers/helperFunctions";
+
 import { addSearchResults } from "../../redux/countries/countriesSlice";
 import {
   changeChoosenRegionName,
+  resetChoosenRegionName,
   changeSearchString,
   resetSearchString,
 } from "../../redux/user/userSlice";
@@ -42,16 +45,18 @@ const Search = ({ match, history }) => {
 
   const onSubmitHandler = (e) => {
     e.preventDefault();
+    dispatch(resetChoosenRegionName());
     history.push(`/search/${stateUserSearchString}`);
   };
   const onResetHandler = (e) => {
     dispatch(resetSearchString());
+    dispatch(resetChoosenRegionName());
     history.push(`/`);
   };
   const onInputChange = (e) => dispatch(changeSearchString(e.target.value));
 
   const regions = [
-    "All",
+    "Filter by Region",
     ...Object.keys(
       Object.keys(stateSearchResultsCountries).reduce(
         (s, key) =>
@@ -72,7 +77,7 @@ const Search = ({ match, history }) => {
   };
 
   const filteredCountries =
-    stateUserChoosenRegion === "All"
+    stateUserChoosenRegion === "Filter by Region"
       ? stateSearchResultsCountries
       : Object.keys(stateSearchResultsCountries).reduce(
           (s, key) =>
@@ -119,7 +124,7 @@ const Search = ({ match, history }) => {
         <StyledReactSelect
           customTheme={customTheme}
           customStyles={getCustomStyles(true)}
-          // className={styles.sortSelect}
+          className={joinClassesWithSpace(classes.filterSelect, "input")}
           name={"regions"}
           value={
             findSelectValue(regionsSelectData, stateUserChoosenRegion) || ""
