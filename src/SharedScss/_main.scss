@@ -9,6 +9,10 @@ body {
   font-family: $font-family;
 }
 
+.card {
+  @include withTheme("background-color", "color-elements");
+}
+
 * {
   box-sizing: border-box;
 }
