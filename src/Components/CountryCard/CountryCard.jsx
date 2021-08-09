@@ -1,10 +1,11 @@
+import { Link } from "react-router-dom";
 import classes from "./CountryCard.module.scss";
 
 const CountryCard = ({
-  country: { flag, name, population, region, capital },
+  country: { flag, name, population, region, capital, numericCode },
 }) => {
   return (
-    <div className={classes.CountryCard}>
+    <Link className={classes.CountryCard} to={`/country/${numericCode}`}>
       <div className={classes.imgContainer}>
         <img src={flag} alt={name} />
       </div>
@@ -23,7 +24,7 @@ const CountryCard = ({
           <p>{capital}</p>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 export default CountryCard;

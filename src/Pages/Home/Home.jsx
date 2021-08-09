@@ -7,7 +7,16 @@ import classes from "./Home.module.scss";
 
 const Home = () => {
   const stateAllCountries = useSelector((state) => state.countries.all);
-  console.log(stateAllCountries);
+  const regions = Object.keys(
+    Object.keys(stateAllCountries).reduce(
+      (s, key) => ({
+        ...s,
+        [stateAllCountries[key].region]: stateAllCountries[key].region,
+      }),
+      {}
+    )
+  );
+  console.log(regions);
 
   return (
     <FulscrnWrpr
@@ -15,8 +24,8 @@ const Home = () => {
       containerClassName={classes.container}
     >
       <div className={classes.cardsContainer}>
-        {stateAllCountries.map((country) => (
-          <CountryCard country={country} />
+        {Object.keys(stateAllCountries).map((key) => (
+          <CountryCard country={stateAllCountries[key]} key={key} />
         ))}
       </div>
     </FulscrnWrpr>

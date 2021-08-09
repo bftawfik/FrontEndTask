@@ -22,8 +22,12 @@ function App() {
     try {
       const response = await getAllCountries();
       const { data } = response;
-      if (stateAllCountries.length === 0) {
-        dispatch(addAllCountries(data));
+      if (Object.keys(stateAllCountries).length === 0) {
+        dispatch(
+          addAllCountries(
+            data.reduce((s, c) => ({ ...s, [c.numericCode]: c }), {})
+          )
+        );
       }
     } catch (error) {
       console.error(error);
