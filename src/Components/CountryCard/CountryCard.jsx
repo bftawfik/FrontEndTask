@@ -1,11 +1,17 @@
 import { Link } from "react-router-dom";
+
+import { joinClassesWithSpace } from "../../Helpers/helperFunctions";
+
 import classes from "./CountryCard.module.scss";
 
 const CountryCard = ({
   country: { flag, name, population, region, capital, numericCode },
 }) => {
   return (
-    <Link className={classes.CountryCard} to={`/country/${numericCode}`}>
+    <Link
+      className={joinClassesWithSpace(classes.CountryCard, "card")}
+      to={`/country/${numericCode}`}
+    >
       <div className={classes.imgContainer}>
         <img src={flag} alt={name} />
       </div>
