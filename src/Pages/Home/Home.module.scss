@@ -1,0 +1,22 @@
+@import "../../SharedScss/variables";
+
+$columnsCount: 4;
+$columnGap: calc(220px / (#{$columnsCount} - 1));
+$columnWidth: calc((100% - ((#{$columnsCount} - 1) * #{$columnGap})) / #{$columnsCount});
+
+.Home {
+  background-image: url("/design/desktop-design-home-light.jpg");
+  background-repeat: no-repeat;
+  background-position: center -80px;
+  height: 100vh;
+  .container {
+    padding: 0 $web-side-space;
+    .cardsContainer {
+      display: grid;
+      grid-template-columns: $columnWidth $columnWidth $columnWidth $columnWidth;
+      column-gap: $columnGap;
+      justify-content: space-evenly;
+      margin-top: 95px;
+    }
+  }
+}
