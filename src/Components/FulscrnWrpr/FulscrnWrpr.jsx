@@ -1,5 +1,3 @@
-import React from "react";
-
 import { joinClassesWithSpace } from "../../Helpers/helperFunctions";
 
 import * as defaultStyles from "./FulscrnWrpr.module.scss";
