@@ -1,6 +1,8 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch, faTimes } from "@fortawesome/free-solid-svg-icons";
 
+import { joinClassesWithSpace } from "../../Helpers/helperFunctions";
+
 import classes from "./Searchbar.module.scss";
 
 const Searchbar = ({
@@ -12,7 +14,7 @@ const Searchbar = ({
 }) => {
   return (
     <form
-      className={classes.Searchbar}
+      className={joinClassesWithSpace(classes.Searchbar, "input")}
       onSubmit={onSubmitHandler}
       onReset={onResetHandler}
     >
