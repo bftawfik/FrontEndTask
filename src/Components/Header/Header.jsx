@@ -4,6 +4,8 @@ import { faMoon, faSun } from "@fortawesome/free-regular-svg-icons";
 
 import FulscrnWrpr from "../FulscrnWrpr/FulscrnWrpr";
 
+import { joinClassesWithSpace } from "../../Helpers/helperFunctions";
+
 import { changeThemeName } from "../../redux/user/userSlice";
 
 import classes from "./Header.module.scss";
@@ -17,7 +19,7 @@ const Header = () => {
 
   return (
     <FulscrnWrpr
-      className={classes.Header}
+      className={joinClassesWithSpace(classes.Header, "element")}
       containerClassName={classes.container}
     >
       <div className={classes.row}>
