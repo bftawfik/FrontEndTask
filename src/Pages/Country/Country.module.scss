@@ -1,0 +1,36 @@
+@import "../../SharedScss/variables";
+@import "../../SharedScss/mixins";
+.Country {
+  // background-image: url("/design/desktop-design-detail-light.jpg");
+  // background-repeat: no-repeat;
+  // background-position: center -80px;
+  // height: 100vh;
+  padding: 48px 0;
+  .container {
+    padding: 0 $web-side-space;
+    .row {
+      display: flex;
+      margin-top: 32px;
+      .home {
+        border: 0;
+        border-radius: 5px;
+        @include defaultBoxShadow();
+        padding: 11px;
+        color: inherit;
+        margin-right: 10px;
+      }
+      .back {
+        border: 0;
+        border-radius: 5px;
+        @include defaultBoxShadow();
+        text-transform: capitalize;
+        font-size: 15px;
+        padding: 11px 30px;
+        color: inherit;
+        span {
+          margin: 15px;
+        }
+      }
+    }
+  }
+}
