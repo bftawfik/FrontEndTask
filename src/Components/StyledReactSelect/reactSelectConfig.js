@@ -23,7 +23,7 @@ const getCustomStyles = () => ({
   menu: {
     fontSize: "14px",
     fontWeight: "bold",
-    margin: 0,
+    margin: "5px 0 0 0",
     padding: "10px 0",
     color: "inherit",
     backgroundColor: "inherit",
