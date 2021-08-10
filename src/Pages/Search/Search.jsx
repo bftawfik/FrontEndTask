@@ -1,6 +1,8 @@
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { withRouter } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHome } from "@fortawesome/free-solid-svg-icons";
 
 import FulscrnWrpr from "../../Components/FulscrnWrpr/FulscrnWrpr";
 import Searchbar from "../../Components/Searchbar/Searchbar";
@@ -113,7 +115,7 @@ const Search = ({ match, history }) => {
       className={classes.Search}
       containerClassName={classes.container}
     >
-      <div className={classes.row}>
+      <div className={classes.topRow}>
         <Searchbar
           onSubmitHandler={onSubmitHandler}
           onResetHandler={onResetHandler}
@@ -135,6 +137,14 @@ const Search = ({ match, history }) => {
         />
       </div>
       <div className={classes.row}>
+        <button
+          className={joinClassesWithSpace(classes.home, "element")}
+          onClick={() => {
+            history.push("/");
+          }}
+        >
+          <FontAwesomeIcon icon={faHome} />
+        </button>
         <h2>Search results for "{searchString}"</h2>
       </div>
       {Object.keys(filteredCountries).length > 0 ? (
