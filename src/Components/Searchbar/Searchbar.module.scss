@@ -1,3 +1,5 @@
+@import "./../../SharedScss/mixins";
+
 .Searchbar {
   // margin-top: 148px;
   display: flex;
@@ -5,7 +7,7 @@
   border-radius: 5px;
   height: 55px;
   width: 480px;
-  box-shadow: 0 0 10px -6px;
+  @include defaultBoxShadow();
   input {
     background-color: transparent;
     border: 0;

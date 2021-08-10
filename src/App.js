@@ -26,7 +26,7 @@ function App() {
       if (Object.keys(stateAllCountries).length === 0) {
         dispatch(
           addAllCountries(
-            data.reduce((s, c) => ({ ...s, [c.numericCode]: c }), {})
+            data.reduce((s, c) => ({ ...s, [c.alpha3Code]: c }), {})
           )
         );
       }

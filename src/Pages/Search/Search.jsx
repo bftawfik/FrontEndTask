@@ -94,7 +94,7 @@ const Search = ({ match, history }) => {
         const { data } = response;
         dispatch(
           addSearchResults(
-            data.reduce((s, c) => ({ ...s, [c.numericCode]: c }), {})
+            data.reduce((s, c) => ({ ...s, [c.alpha3Code]: c }), {})
           )
         );
       }

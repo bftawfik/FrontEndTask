@@ -5,12 +5,12 @@ import { joinClassesWithSpace } from "../../Helpers/helperFunctions";
 import classes from "./CountryCard.module.scss";
 
 const CountryCard = ({
-  country: { flag, name, population, region, capital, numericCode },
+  country: { flag, name, population, region, capital, alpha3Code },
 }) => {
   return (
     <Link
       className={joinClassesWithSpace(classes.CountryCard, "element")}
-      to={`/country/${numericCode}`}
+      to={`/country/${alpha3Code}`}
     >
       <div className={classes.imgContainer}>
         <img src={flag} alt={name} />

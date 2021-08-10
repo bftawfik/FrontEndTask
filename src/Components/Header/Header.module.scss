@@ -1,6 +1,8 @@
 @import "../../SharedScss/variables";
+@import "./../../SharedScss/mixins";
+
 .Header {
-  box-shadow: 0 0 10px -6px;
+  @include defaultBoxShadow();
   // background-image: url("/design/desktop-design-home-light.jpg");
   // background-repeat: no-repeat;
   // background-position: top center;
