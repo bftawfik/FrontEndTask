@@ -1,4 +1,4 @@
 const NotFound = () => {
-  return <div>404</div>;
+  return <h2>404</h2>;
 };
 export default NotFound;
