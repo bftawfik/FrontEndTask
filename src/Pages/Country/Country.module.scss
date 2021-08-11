@@ -1,9 +1,9 @@
 @import "../../SharedScss/variables";
 @import "../../SharedScss/mixins";
 .Country {
-  // background-image: url("/design/desktop-design-detail-light.jpg");
+  // background-image: url("/design/mobile-design-detail-dark.jpg");
   // background-repeat: no-repeat;
-  // background-position: center -80px;
+  // background-position: center -160px;
   // height: 100vh;
   padding: 48px 0;
   .container {
@@ -29,6 +29,21 @@
         color: inherit;
         span {
           margin: 15px;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 750px) {
+    .container {
+      padding: 0 55px;
+      .row {
+        .home {
+          padding: 16px;
+          font-size: 28px;
+        }
+        .back {
+          padding: 16px 45px;
+          font-size: 28px;
         }
       }
     }
