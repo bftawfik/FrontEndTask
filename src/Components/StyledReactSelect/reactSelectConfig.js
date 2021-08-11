@@ -8,7 +8,7 @@ const customTheme = {
 };
 
 const getCustomStyles = (flag) =>
-  flag
+  flag === true
     ? {
         control: {
           backgroundColor: "transparent",
@@ -35,7 +35,7 @@ const getCustomStyles = (flag) =>
           padding: "4px 46px 9px",
           color: "inherit",
           fontSize: "26px",
-          fontWeight: "normal"
+          fontWeight: "normal",
         },
         singleValue: {
           fontWeight: "bold",
