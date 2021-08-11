@@ -1,6 +1,7 @@
 import { useSelector, useDispatch } from "react-redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMoon, faSun } from "@fortawesome/free-regular-svg-icons";
+import { faMoon } from "@fortawesome/free-regular-svg-icons";
+import { faSun } from "@fortawesome/free-solid-svg-icons";
 
 import FulscrnWrpr from "../FulscrnWrpr/FulscrnWrpr";
 
@@ -9,6 +10,7 @@ import { joinClassesWithSpace } from "../../Helpers/helperFunctions";
 import { changeThemeName } from "../../redux/user/userSlice";
 
 import classes from "./Header.module.scss";
+import { Link } from "react-router-dom";
 
 const icons = { light: faSun, dark: faMoon };
 
@@ -23,7 +25,9 @@ const Header = () => {
       containerClassName={classes.container}
     >
       <div className={classes.row}>
-        <h1 className={classes.title}>Where in the world?</h1>
+        <Link to="/">
+          <h1 className={classes.title}>Where in the world?</h1>
+        </Link>
         {stateThemesList
           .filter(({ value: themeValue }) => themeValue !== stateUserTheme)
           .map((theme, ndx) => (

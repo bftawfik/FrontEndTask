@@ -3,7 +3,7 @@
 
 .Header {
   @include defaultBoxShadow();
-  // background-image: url("/design/desktop-design-home-light.jpg");
+  // background-image: url("/design/mobile-design-home-dark.jpg");
   // background-repeat: no-repeat;
   // background-position: top center;
   .container {
@@ -14,10 +14,15 @@
       justify-content: space-between;
       height: 100%;
       align-items: center;
-      .title {
-        font-size: 24px;
-        margin: 0;
+      a {
+        text-decoration: none;
+        color: inherit;
+        .title {
+          font-size: 24px;
+          margin: 0;
+        }
       }
+
       .toggle {
         font-size: 16px;
         background-color: transparent;
@@ -26,6 +31,26 @@
         color: inherit;
         svg {
           margin-right: 10px;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 750px) {
+    .container {
+      height: 164px;
+      padding: 0 33px;
+      .row {
+        a {
+          .title {
+            font-size: 28px;
+          }
+        }
+
+        .toggle {
+          font-size: 24px;
+          svg {
+            margin-right: 22px;
+          }
         }
       }
     }
