@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   theme: "light",
-  choosenRegion: "Filter by Region",
+  choosenRegion: "All",
   searchString: "",
 };
 
@@ -17,7 +17,7 @@ const userSlice = createSlice({
       state.choosenRegion = action.payload;
     },
     resetChoosenRegionName: (state) => {
-      state.choosenRegion = "Filter by Region";
+      state.choosenRegion = "All";
     },
     changeSearchString: (state, action) => {
       state.searchString = action.payload;

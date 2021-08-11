@@ -59,7 +59,7 @@ const Search = ({ match, history }) => {
   const onInputChange = (e) => dispatch(changeSearchString(e.target.value));
 
   const regions = [
-    "Filter by Region",
+    "All",
     ...Object.keys(
       Object.keys(stateSearchResultsCountries).reduce(
         (s, key) =>
@@ -80,7 +80,7 @@ const Search = ({ match, history }) => {
   };
 
   const filteredCountries =
-    stateUserChoosenRegion === "Filter by Region"
+    stateUserChoosenRegion === "All"
       ? stateSearchResultsCountries
       : Object.keys(stateSearchResultsCountries).reduce(
           (s, key) =>
