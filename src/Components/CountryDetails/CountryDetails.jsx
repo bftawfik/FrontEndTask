@@ -69,7 +69,7 @@ const CountryDetails = ({
           {borders && (
             <div className={classes.borders}>
               {borders.map((alpha3Code) => (
-                <Link to={`/country/${alpha3Code}`} className="element">
+                <Link key={alpha3Code} to={`/country/${alpha3Code}`} className="element">
                   {allCountries[alpha3Code].name}
                 </Link>
               ))}
