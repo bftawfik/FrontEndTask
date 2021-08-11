@@ -46,8 +46,10 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
       <Router>
+        <Route path="*">
+          <Header />
+        </Route>
         <Switch>
           <Route path="/search/:searchString">
             <Search />
