@@ -8,9 +8,9 @@ $columnWidth: calc(
 );
 
 .Home {
-  background-image: url("/design/mobile-design-home-dark.jpg");
-  background-repeat: no-repeat;
-  background-position: center -160px;
+  // background-image: url("/design/mobile-design-home-dark.jpg");
+  // background-repeat: no-repeat;
+  // background-position: center -160px;
   padding: 48px 0;
   .container {
     padding: 0 $web-side-space;
@@ -59,7 +59,6 @@ $columnWidth: calc(
   @media screen and (max-width: 750px) {
     .container {
       padding: 0 33px;
-      height: 500px;
       .row {
         flex-direction: column;
         .filterSelect {
@@ -69,7 +68,7 @@ $columnWidth: calc(
         }
       }
       .cardsContainer {
-        padding: 0 47px;
+        padding: 18px 77px;
         display: flex;
         flex-direction: column;
       }
