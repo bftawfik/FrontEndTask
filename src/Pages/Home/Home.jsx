@@ -79,12 +79,13 @@ const Home = ({ history }) => {
         );
 
   const updateAllDimensions = () => {
-    if (window.innerWidth > 750 && flagOf_750 === true) {
+    if (window.innerWidth > 750) {
       setFlagOf_750(false);
-    } else if (window.innerWidth <= 750 && flagOf_750 === false) {
+    } else if (window.innerWidth <= 750) {
       setFlagOf_750(true);
     }
   };
+
 
   useEffect(() => {
     window.addEventListener("resize", updateAllDimensions);
