@@ -46,7 +46,7 @@
     }
   }
   @media screen and (max-width: 750px) {
-  border-radius: 10px;
+    border-radius: 10px;
     .dataContainer {
       margin: 0 50px 50px;
       h2 {
@@ -63,6 +63,22 @@
         p {
           margin: 0;
           font-size: 27px;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 640px) {
+    .dataContainer {
+      h2 {
+        font-size: 20px;
+      }
+      .dataRow {
+        margin: 5px 0;
+        h4 {
+          font-size: 16px;
+        }
+        p {
+          font-size: 16px;
         }
       }
     }
