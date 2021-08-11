@@ -15,7 +15,7 @@ $columnWidth: calc(
   padding: 48px 0;
   .container {
     padding: 0 $web-side-space;
-    .row{
+    .row {
       align-items: center;
     }
     .row,
@@ -72,15 +72,24 @@ $columnWidth: calc(
   }
   @media screen and (max-width: 750px) {
     .container {
-      padding: 0 35px;
+      padding: 0 33px;
       .topRow {
         flex-direction: column;
         .filterSelect {
-          margin-top: 70px;
+          margin-top: 82px;
+          width: 400px;
+          border-radius: 10px;
+        }
+      }
+      .row {
+        .home {
+          padding: 16px;
+          margin-top: 20px;
+          font-size: 28px;
         }
       }
       .cardsContainer {
-        padding: 0 45px;
+        padding: 18px 77px;
         display: flex;
         flex-direction: column;
       }

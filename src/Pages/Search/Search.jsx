@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { withRouter } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -31,6 +31,7 @@ import { getCountriesWithName } from "../../services/services";
 import classes from "./Search.module.scss";
 
 const Search = ({ match, history }) => {
+  const [flagOf_750, setFlagOf_750] = useState(false);
   const {
     params: { searchString },
   } = match;
@@ -110,6 +111,21 @@ const Search = ({ match, history }) => {
     fetchSearchResults(dispatch, searchString);
   }, [dispatch, searchString]);
 
+  const updateAllDimensions = () => {
+    if (window.innerWidth > 750) {
+      setFlagOf_750(false);
+    } else if (window.innerWidth <= 750) {
+      setFlagOf_750(true);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", updateAllDimensions);
+    updateAllDimensions();
+    return () => {
+      window.removeEventListener("resize", updateAllDimensions);
+    };
+  }, []);
   return (
     <FulscrnWrpr
       className={classes.Search}
@@ -125,7 +141,7 @@ const Search = ({ match, history }) => {
         />
         <StyledReactSelect
           customTheme={customTheme}
-          customStyles={getCustomStyles(true)}
+          customStyles={getCustomStyles(flagOf_750)}
           className={joinClassesWithSpace(classes.filterSelect, "input")}
           name={"regions"}
           value={
