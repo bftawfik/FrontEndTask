@@ -55,4 +55,18 @@
       }
     }
   }
+  @media screen and (max-width: 540px) {
+    .container {
+      .row {
+        .toggle {
+          span{
+            display: none;
+          }
+          svg{
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
 }

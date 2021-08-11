@@ -37,7 +37,7 @@ const Header = () => {
               className={classes.toggle}
             >
               <FontAwesomeIcon icon={icons[theme.value]} />
-              {theme.label}
+              <span>{theme.label}</span>
             </button>
           ))}
       </div>
