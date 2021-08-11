@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { withRouter } from "react-router-dom";
 
@@ -25,6 +26,7 @@ import {
 import classes from "./Home.module.scss";
 
 const Home = ({ history }) => {
+  const [flagOf_750, setFlagOf_750] = useState(false);
   const dispatch = useDispatch();
 
   const stateAllCountries = useSelector((state) => state.countries.all);
@@ -76,6 +78,22 @@ const Home = ({ history }) => {
           {}
         );
 
+  const updateAllDimensions = () => {
+    if (window.innerWidth > 750 && flagOf_750 === true) {
+      setFlagOf_750(false);
+    } else if (window.innerWidth <= 750 && flagOf_750 === false) {
+      setFlagOf_750(true);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", updateAllDimensions);
+    updateAllDimensions();
+    return () => {
+      window.removeEventListener("resize", updateAllDimensions);
+    };
+  }, []);
+  
   return (
     <FulscrnWrpr
       className={classes.Home}
@@ -91,7 +109,7 @@ const Home = ({ history }) => {
         />
         <StyledReactSelect
           customTheme={customTheme}
-          customStyles={getCustomStyles(true)}
+          customStyles={getCustomStyles(flagOf_750)}
           className={joinClassesWithSpace(classes.filterSelect, "input")}
           name={"regions"}
           value={
